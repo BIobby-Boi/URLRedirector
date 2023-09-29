@@ -1,3 +1,3 @@
-# Https://Blobby-boi.github.io/URL-Redirector/
+# Https://Blobby-boi.github.io/URLRedirector/
 ## URLRedirector
 Redirects to URLs
