@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
    <script>thing = prompt("Enter URL here:");
-   window.location.href = thing;</script>
+   if(thing.includes('https://') || thing.includes("http://")) {window.location.href = thing;}else{window.location.href = "https://" + thing;})();
+   </script>
 </head>
 <body>
 </body>
