@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <script>thing = prompt("What's your URL?");
-   window.location.href = thing;</script>
+   <script>redirect = prompt("What's your URL?");
+   if(redirect.includes('https://') || redirect.includes("http://")) {window.location.href = redirect;}else{window.location.href = "https://" + redirect;})();</script>
 </head>
 <body>
 </body>
