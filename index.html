@@ -1,31 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <style>
-    #thing, #submit {
-      margin: 0 auto;
-      width: 200px;
-    }
-  </style>
+   <script>thing = prompt("Enter URL here:");
+   if(thing.includes('https://') || thing.includes("http://")) {window.location.href = thing;}else{window.location.href = "https://" + thing;})();
+   </script>
   <script>
     // Get the URL from the user.
-    const thing = document.getElementById("thing");
+    const thing = window.prompt("Enter URL here:");
 
-    // Submit the URL when the user clicks the button.
-    document.getElementById("submit").addEventListener("click", function() {
-      // Check if the URL already includes a protocol.
-      if (thing.value.startsWith("https://") || thing.value.startsWith("http://")) {
-        // Open the URL directly.
-        window.location.href = thing.value;
-      } else {
-        // Prepend the HTTPS protocol to the URL and open it.
-        window.location.href = "https://" + thing.value;
-      }
-    });
+    // Check if the URL already includes a protocol.
+    if (thing.startsWith("https://") || thing.startsWith("http://")) {
+      // Open the URL directly.
+      window.location.href = thing;
+    } else {
+      // Prepend the HTTPS protocol to the URL and open it.
+      window.location.href = "https://" + thing;
+    }
   </script>
 </head>
 <body>
-  <input type="text" id="thing" placeholder="Enter URL here...">
-  <button type="button" id="submit">Submit</button>
 </body>
-</html>
