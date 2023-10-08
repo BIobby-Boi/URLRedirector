@@ -11,14 +11,17 @@
     // Get the URL from the user.
     const thing = document.getElementById("thing");
 
-    // Check if the URL already includes a protocol.
-    if (thing.value.startsWith("https://") || thing.value.startsWith("http://")) {
-      // Open the URL directly.
-      window.location.href = thing.value;
-    } else {
-      // Prepend the HTTPS protocol to the URL and open it.
-      window.location.href = "https://" + thing.value;
-    }
+    // Submit the URL when the user clicks the button.
+    document.getElementById("submit").addEventListener("click", function() {
+      // Check if the URL already includes a protocol.
+      if (thing.value.startsWith("https://") || thing.value.startsWith("http://")) {
+        // Open the URL directly.
+        window.location.href = thing.value;
+      } else {
+        // Prepend the HTTPS protocol to the URL and open it.
+        window.location.href = "https://" + thing.value;
+      }
+    });
   </script>
 </head>
 <body>
