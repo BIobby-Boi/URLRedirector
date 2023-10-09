@@ -45,12 +45,6 @@
       filter: saturate(4);
     }
 
-    .image {
-      position: absolute;
-      top: 150px;
-      left: 25%;
-    }
-
     .text {
       position: absolute;
       top: 150px;
@@ -60,13 +54,22 @@
       font-weight: bold;
       color: white;
     }
+
+    .new-image {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+    }
   </style>
 </head>
 <body>
-  <img src="https://lh3.googleusercontent.com/a/ACg8ocKlmLbwR14KND2gVGIzp_yF-REPA8xNxpimGRjH4ererw=s288-c-no" class="image">
   <div class="text">URLRedirector</div>
   <input type="text" id="url" placeholder="Enter URL here">
   <button class="redirect-button" onclick="redirect()">Redirect</button>
+  <img src="https://lh3.googleusercontent.com/a/ACg8ocKlmLbwR14KND2gVGIzp_yF-REPA8xNxpimGRjH4ererw=s288-c-no" class="new-image">
 
   <script>
     function redirect() {
