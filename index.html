@@ -2,10 +2,20 @@
 <html>
 <head>
   <title>URL Redirect</title>
+  <style>
+    .redirect-button {
+      background-color: green;
+      border: none;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <input type="text" id="url" placeholder="Enter URL here">
-  <button onclick="redirect()">Redirect</button>
+  <button class="redirect-button" onclick="redirect()">Redirect</button>
 
   <script>
     function redirect() {
