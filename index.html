@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>URL Redirect</title>
+  <title>URLRedirector</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&display=swap');
 
@@ -9,7 +9,7 @@
       margin: 0 auto;
       display: block;
       position: absolute;
-      top: 40%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Varela Round', sans-serif;
@@ -48,13 +48,21 @@
     .image {
       position: absolute;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 25%;
+    }
+
+    .text {
+      position: absolute;
+      top: 0;
+      right: 25%;
+      font-family: 'Varela Round', sans-serif;
+      font-size: 60px;
     }
   </style>
 </head>
 <body>
-  <img src="https://example.com/image.jpg" class="image">
+  <img src="https://lh3.googleusercontent.com/a/ACg8ocKlmLbwR14KND2gVGIzp_yF-REPA8xNxpimGRjH4ererw=s288-c-no" class="image">
+  <div class="text">URLRedirector</div>
   <input type="text" id="url" placeholder="Enter URL here">
   <button class="redirect-button" onclick="redirect()">Redirect</button>
 
