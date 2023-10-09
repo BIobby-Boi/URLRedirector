@@ -9,7 +9,7 @@
       margin: 0 auto;
       display: block;
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Varela Round', sans-serif;
@@ -38,14 +38,23 @@
       width: 300px;
       height: 150px;
       margin-left: 270px;
+      outline: 10px solid darkgreen;
     }
 
     button.redirect-button:hover {
       filter: saturate(4);
     }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   </style>
 </head>
 <body>
+  <img src="https://example.com/image.jpg" class="image">
   <input type="text" id="url" placeholder="Enter URL here">
   <button class="redirect-button" onclick="redirect()">Redirect</button>
 
