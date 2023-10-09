@@ -1,22 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-   <script>thing = prompt("Enter URL here:");
-   if(thing.includes('https://') || thing.includes("http://")) {window.location.href = thing;}else{window.location.href = "https://" + thing;})();
-   </script>
-  <script>
-    // Get the URL from the user.
-    const thing = window.prompt("Enter URL here:");
-
-    // Check if the URL already includes a protocol.
-    if (thing.startsWith("https://") || thing.startsWith("http://")) {
-      // Open the URL directly.
-      window.location.href = thing;
-    } else {
-      // Prepend the HTTPS protocol to the URL and open it.
-      window.location.href = "https://" + thing;
-    }
-  </script>
+  <title>URL Redirect</title>
 </head>
 <body>
+  <input type="text" id="url" placeholder="Enter URL here">
+  <button onclick="redirect()">Redirect</button>
+
+  <script>
+    function redirect() {
+      var url = document.getElementById('url').value;
+
+      // If the URL does not start with "https://" or "http://", prepend "https://" to it.
+      if (url.indexOf('https://') !== 0 && url.indexOf('http://') !== 0) {
+        url = 'https://' + url;
+      }
+
+      window.location.href = url;
+    }
+  </script>
 </body>
+</html>
